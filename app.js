@@ -3,6 +3,10 @@ const bodyParser = require('body-parser');
 const schoolRoutes = require('./routes/schoolRoutes');
 
 const app = express();
+
+app.get('/',(req,res)=>{
+  res.status(200).send('Schoolapi');
+})
 app.use(bodyParser.json());
 
 app.use('/api', schoolRoutes);
